@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primarydark">#5B4B8A</color>
     <color name="accent">#726A95</color>
+    <color name="green">#6E9E08</color>
+    <color name="blue">#A7C5FA</color>
 </resources>

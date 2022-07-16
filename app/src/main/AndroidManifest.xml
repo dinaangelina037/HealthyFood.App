@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ResepMakanan"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".acitivity.RegisterActivity"
+            android:exported="true" />
+        <activity
             android:name=".acitivity.MainActivity"
             android:exported="true" />
         <activity

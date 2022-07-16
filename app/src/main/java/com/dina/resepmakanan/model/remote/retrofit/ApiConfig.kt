@@ -1,4 +1,4 @@
-package com.dina.resepmakanan.model
+package com.dina.resepmakanan.model.remote.retrofit
 
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -9,9 +9,11 @@ import java.util.concurrent.TimeUnit
 
 object ApiConfig {
 
-    private const val BASE_URL = "http://192.168.1.6/healthy-app/public/api/"
+//    private const val BASE_URL = "http://192.168.33.102/healthy-app/public/api/"
 
 //    private const val BASE_URL = "http://192.168.33.76/healthy-app/public/api/"
+
+    private const val BASE_URL = "http://192.168.137.139/healthy-app/public/api/"
 
 
     private val client: Retrofit
@@ -20,7 +22,6 @@ object ApiConfig {
         val gson = GsonBuilder()
             .setLenient()
             .create()
-
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
         val client: OkHttpClient = OkHttpClient.Builder()
@@ -28,15 +29,12 @@ object ApiConfig {
             .connectTimeout(40, TimeUnit.SECONDS)
             .readTimeout(40,TimeUnit.SECONDS)
             .build()
-
-
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(client)
             .build()
     }
-
     val instanceRetrofit: ApiService
     get() = client.create(ApiService::class.java)
 

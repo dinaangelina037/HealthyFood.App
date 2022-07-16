@@ -16,22 +16,17 @@ import com.squareup.picasso.Picasso
 class FoodAdapter(var listFood: List<DataItem?>?) : RecyclerView.Adapter<FoodAdapter.MyViewHolder>(){
 
     class MyViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview){
-
         val imgFood = itemview.findViewById<ImageView>(R.id.img_food)
         val tvNameFood = itemview.findViewById<TextView>(R.id.tv_name_food)
-
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_row_food, parent,false)
         return MyViewHolder(view)
     }
-
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.tvNameFood.text = listFood?.get(position)?.name
 
-
-        val img = "http://192.168.1.6/healthy-app/public/storage/"+listFood?.get(position)?.image
+        val img = "http://192.168.137.139/healthy-app/public/storage/"+listFood?.get(position)?.image
 
         Picasso.get()
             .load(img)
@@ -46,7 +41,6 @@ class FoodAdapter(var listFood: List<DataItem?>?) : RecyclerView.Adapter<FoodAda
             context.startActivity(i)
         }
     }
-
     override fun getItemCount(): Int {
         if (listFood != null){
             return listFood!!.size

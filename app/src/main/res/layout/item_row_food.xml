@@ -16,11 +16,11 @@
 
         <ImageView
             android:id="@+id/img_food"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="170dp"
             android:layout_marginTop="10dp"
             android:scaleType="fitXY"
-            android:src="@drawable/breakfast"/>
+            android:src="@drawable/qoute1"/>
 
         <TextView
             android:id="@+id/tv_name_food"
@@ -32,11 +32,9 @@
             android:textStyle="bold"
             android:maxLines="2"
             android:ellipsize="marquee"
-            android:text="Food Name"/>
-
+            android:text="Food Name"
+            android:textColor="@android:color/black" />
     </LinearLayout>
-
-
 
 
 </androidx.cardview.widget.CardView>

@@ -1,4 +1,4 @@
-package com.dina.resepmakanan.model
+package com.dina.resepmakanan.model.remote.response
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

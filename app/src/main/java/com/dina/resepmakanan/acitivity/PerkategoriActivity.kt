@@ -7,8 +7,9 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import com.dina.resepmakanan.R
 import com.dina.resepmakanan.adapter.FoodAdapter
-import com.dina.resepmakanan.adapter.NamaKategoriAdapter
 import com.dina.resepmakanan.model.*
+import com.dina.resepmakanan.model.remote.response.Kategori
+import com.dina.resepmakanan.model.remote.retrofit.ApiConfig
 import kotlinx.android.synthetic.main.activity_perkategori.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -23,14 +24,12 @@ class PerkategoriActivity : AppCompatActivity() {
         refresh()
 
     }
-
     private fun refresh() {
         refresh.setOnRefreshListener{
             kategori()
             refresh.isRefreshing = false
         }
     }
-
     private fun kategori() {
         val dataKategori = intent.getParcelableExtra<Kategori>("DTL")
         if (dataKategori !=null){
@@ -40,10 +39,9 @@ class PerkategoriActivity : AppCompatActivity() {
 
         }
     }
-
     private fun getPerkategori(categori: Int?) {
         pb_per_kategori.visibility = View.VISIBLE
-      if (categori != null)
+       if (categori != null) {
           ApiConfig.instanceRetrofit.getPerkategori(categori).enqueue(object : Callback<ResponseFood>{
               override fun onResponse(call: Call<ResponseFood>, response: Response<ResponseFood>) {
                   pb_per_kategori.visibility = View.GONE
@@ -59,10 +57,10 @@ class PerkategoriActivity : AppCompatActivity() {
                       }
                   }
               }
-
               override fun onFailure(call: Call<ResponseFood>, t: Throwable) {
                   Toast.makeText(this@PerkategoriActivity, t.localizedMessage, Toast.LENGTH_SHORT).show()
               }
           })
+       }
     }
 }

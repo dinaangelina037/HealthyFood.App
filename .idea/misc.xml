@@ -6,16 +6,25 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/drawable/bg_circle_radius_primary.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/drawable/bg_rounded.xml" value="0.2203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/drawable/bg_search.xml" value="0.1" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/activity_detail.xml" value="0.21" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/drawable/favorite_bookmark.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/drawable/ic_account.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/drawable/ic_back.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/drawable/ic_bookmark.xml" value="0.2203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/drawable/ic_favorite.xml" value="0.2203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/drawable/ic_link.xml" value="0.20555555555555555" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/drawable/ic_play.xml" value="0.20555555555555555" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/activity_filter_food.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/activity_filter_food_adapter.xml" value="0.16944444444444445" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/activity_main.xml" value="0.1366120218579235" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/activity_perkategori.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/akun_fragment.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/bookmark_fragment.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/detail_activity.xml" value="0.2" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/home_fragment.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/home_fragment.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/item_kategori.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/item_row_food.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ResepMakanan/app/src/main/res/layout/item_row_kategori.xml" value="0.5" />

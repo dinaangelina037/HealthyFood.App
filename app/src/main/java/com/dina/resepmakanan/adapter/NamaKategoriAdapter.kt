@@ -5,11 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.dina.resepmakanan.R
 import com.dina.resepmakanan.acitivity.PerkategoriActivity
-import com.dina.resepmakanan.model.Kategori
+import com.dina.resepmakanan.model.remote.response.Kategori
 
 class NamaKategoriAdapter (var listNamaKategori: List<Kategori?>?) : RecyclerView.Adapter<NamaKategoriAdapter.MyViewHolder>(){
 
@@ -29,7 +28,6 @@ class NamaKategoriAdapter (var listNamaKategori: List<Kategori?>?) : RecyclerVie
 
         val context = holder.itemView.context
         holder.itemView.setOnClickListener {
-//            Toast.makeText(context,listNamaKategori?.get(position)?.categori, Toast.LENGTH_SHORT).show()
 
             val i = Intent(context, PerkategoriActivity::class.java)
             i.putExtra("DTL", listNamaKategori?.get(position))
@@ -39,6 +37,7 @@ class NamaKategoriAdapter (var listNamaKategori: List<Kategori?>?) : RecyclerVie
 
     override fun getItemCount(): Int {
         return listNamaKategori!!.size
+
     }
 
 }

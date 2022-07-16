@@ -5,114 +5,114 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragment.HomeFragment">
+    tools:context=".fragment.HomeFragment2">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="@color/purple_500">
+        android:layout_margin="8dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_toLeftOf="@+id/icn_chat"
+        <RelativeLayout
+            android:id="@+id/imgProfil"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            app:cardCornerRadius="17dp"
-            tools:ignore="UnknownId">
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:gravity="center_vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_profil" />
+        </RelativeLayout>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:src="@drawable/ic_search"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgProfil"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
 
-                <TextView
-                    android:layout_marginLeft="7dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Cari Produk"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:text="HealthyFood!"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sp"/>
 
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <ImageView
-            android:id="@+id/icn_chat"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="8dp"
-            android:src="@drawable/ic_notif"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/quotes"
+                android:textSize="24dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
     </RelativeLayout>
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_loading"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_marginBottom="10dp"
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/vp_slider"
-                android:layout_width="match_parent"
-                android:layout_height="170dp"/>
+            android:layout_height="match_parent">
 
             <LinearLayout
+                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"/>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Kategori Menu"
-                    android:layout_marginHorizontal="10dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    android:layout_marginBottom="9dp"/>
+                    android:orientation="vertical">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_nama_kategori"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Categories"
+                        android:layout_marginHorizontal="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:layout_marginBottom="9dp"/>
 
-                <TextView
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_nama_kategori"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Daftar Menu"
-                    android:layout_marginHorizontal="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:layout_marginBottom="9dp"
-                    android:textStyle="bold"/>
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_food"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Food Menu"
+                        android:layout_marginHorizontal="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:layout_marginBottom="9dp"
+                        android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_food"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
             </LinearLayout>
-
-        </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>

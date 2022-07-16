@@ -20,7 +20,6 @@ class AdapterSlider(var data: ArrayList<Int>, var context: Activity?) : PagerAda
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
         return view == `object`
     }
-
     @NonNull
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         layoutInflater = LayoutInflater.from(context)
@@ -34,7 +33,6 @@ class AdapterSlider(var data: ArrayList<Int>, var context: Activity?) : PagerAda
 
         return view
     }
-
     override fun destroyItem(@NonNull container: ViewGroup, position: Int, `object`: Any) {
         container.removeView(`object` as View)
     }
